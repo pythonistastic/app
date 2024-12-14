@@ -1,0 +1,6 @@
+dash==2.14.2
+pandas==2.1.4
+numpy==1.26.2
+plotly==5.18.0
+requests==2.31.0
+gunicorn==21.2.0
