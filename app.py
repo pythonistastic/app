@@ -158,7 +158,7 @@ class BinanceDataStream:
         self.symbol = symbol
         self.interval = interval
         self.limit = limit
-        self.base_url = 'https://api.binance.com/api/v3/klines'
+        self.base_url = 'https://api.binance.us/api/v3/klines'
 
     def fetch_data(self):
         params = {
