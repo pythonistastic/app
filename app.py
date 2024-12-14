@@ -268,9 +268,6 @@ def create_figure(df, signals):
 
     return fig
 
-# Initialize the Dash app
-app = dash.Dash(__name__)
-
 # Create the layout
 app.layout = html.Div([
     html.H1("Real-time Crypto Analysis", style={'textAlign': 'center'}),
