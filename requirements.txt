@@ -1,4 +1,6 @@
 dash==2.14.2
+dash-core-components==2.0.0
+dash-html-components==2.0.0
 pandas==2.1.4
 numpy==1.26.2
 plotly==5.18.0
