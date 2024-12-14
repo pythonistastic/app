@@ -8,11 +8,20 @@ import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
 import time
-
+from flask import Flask
+import os
 
 # Initialize the Dash app with server variable
-app = dash.Dash(__name__)
-server = app.server  # This is needed for deployment
+# app = dash.Dash(__name__)
+# server = app.server  # This is needed for deployment
+
+# Modify the Dash initialization
+server = Flask(__name__)
+app = dash.Dash(
+    __name__,
+    server=server,
+    suppress_callback_exceptions=True
+)
 
 def calculate_adx(df, period=14):
     """Calculate Average Directional Index (ADX)"""
@@ -332,7 +341,6 @@ def main():
 
 
 if __name__ == "__main__":
-    # Use environment variable for port if available (for deployment)
-    import os
-    port = int(os.environ.get('PORT', 8050))
-    app.run_server(debug=False, host='0.0.0.0', port=port)
+    port = int(os.environ.get("PORT", 8050))
+    app.run_server(host="0.0.0.0", port=port, debug=False)
+
