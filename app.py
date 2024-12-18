@@ -270,7 +270,7 @@ def create_figure(df, signals):
 
 # Create the layout
 app.layout = html.Div([
-    html.H1("Real-time Crypto Analysis", style={'textAlign': 'center'}),
+    html.H1("Abuissa & Adaileh Crypto-mining", style={'textAlign': 'center'}),
     
     # Controls div
     html.Div([
